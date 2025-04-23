@@ -16,24 +16,14 @@ The layout includes:
 
 ---
 
-## 🧩 File Structure
-
-| File | Description |
-|------|-------------|
-| `Bend_waveguide_functions1.py` | Defines the `bend_waveguide1()` function that builds the layout. |
-| `Bend_waveguide_main.py` | Main script: sets parameters, calls the function, and exports a GDS file. |
-| `layers.py` | Registers the photonic layers used in the layout. |
 
 ---
 
 ## 🔧 How to Run
 
 1. Install [Nazca Design](https://nazca-design.org/):
-   ```bash
-   pip install nazca
 
 2.Clone this repository and run the main script:
 
-python Bend_waveguide_main.py
 
 A GDS file named Bend_waveguide1.gds will be generated in the same directory.

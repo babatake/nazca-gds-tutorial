@@ -1,27 +1,21 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Aug 18 22:52:30 2019
-
-@author: Takeshi
-"""
-
 import nazca as nd
 import layers
 from Bend_waveguide_functions1 import bend_waveguide1
 
 layers
-# 使用するパラメータの定義
-Width_taper1 = 0.48       # テーパー開始幅
-Width_taper2 = 0.48       # テーパー終了幅（ストレートやベンドの幅にも使う）
-L_taper = 1             # テーパーの長さ
-L1 = 1                  # 最初のストレート長
-L2 = 1                  # 最後のストレート長
-xp = 0                    # 配置X座標
-yp = 0                    # 配置Y座標
-Radii = 2                # ベンドの半径
+# Define parameters for the structure
+Width_taper1 = 0.48       # Starting width of the taper
+Width_taper2 = 0.48       # Ending width of the taper (used for straight and bend sections)
+L_taper = 1               # Length of the taper
+L1 = 1                    # Length of the initial straight section
+L2 = 1                    # Length of the final straight section
+xp = 0                    # Placement X coordinate
+yp = 0                    # Placement Y coordinate
+Radii = 2                 # Bend radius
 
-# 関数の呼び出し
-cell=bend_waveguide1(
+# Call the function to create the waveguide cell
+cell = bend_waveguide1(
     Width_taper1=Width_taper1,
     Width_taper2=Width_taper2,
     L_taper=L_taper,
@@ -32,7 +26,7 @@ cell=bend_waveguide1(
     Radii=Radii
 )
 
-cell.put(0, 0)  # ✅ここでセルをGDSに配置する！
+cell.put(0, 0)  # ✅ Place the cell into the layout at coordinates (0, 0)
 
-# GDSファイルへのエクスポート
+# Export the layout to a GDS file
 nd.export_gds(filename='Bend_waveguide1.gds')

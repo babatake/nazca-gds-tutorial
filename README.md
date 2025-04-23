@@ -1,9 +1,9 @@
 # nazca-gds-tutorial
 Photonic IC design tutorials using Nazca Design
 
-# 📐 Bend Waveguide Generator with Nazca Design
+# 📐 Photonic IC CAD Generator with Nazca Design
 
-This repository contains a complete set of Python scripts to generate a **bent waveguide layout** using [Nazca Design](https://nazca-design.org/) and export it as a GDS file.
+This repository contains a complete set of Python scripts to generate a **Photonic IC layout** using [Nazca Design](https://nazca-design.org/) and export it as a GDS file.
 
 ---
 
